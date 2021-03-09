@@ -1,0 +1,9 @@
+# dependencies
+/target
+Cargo.lock
+
+# misc
+.env
+
+# db
+/migrations
