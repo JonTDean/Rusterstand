@@ -1,0 +1,17 @@
+{
+	"name": "rusterstand",
+	"version": "0.0.1",
+	"description": "Learn Rust sensibly",
+	"main": "",
+	"scripts": {
+		"start": "node server",
+		"react": "npm start --prefix rusterstand-frontend",
+		"rocket": "cargo run --manifest-path ./rusterstand-backend/Cargo.toml",
+		"stack": "concurrently \"npm run react\" \"npm run rocket\" "
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"concurrently": "^6.0.0"
+	}
+}
