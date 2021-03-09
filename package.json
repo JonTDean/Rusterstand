@@ -1,15 +1,15 @@
 {
 	"name": "rusterstand",
 	"version": "0.0.1",
-	"description": "Learn Rust sensibly",
+	"description": "Learn Rust Sensibly",
 	"main": "",
 	"scripts": {
-		"start": "node server",
+		"start": "tsdx watch",
 		"react": "npm start --prefix rusterstand-frontend",
 		"rocket": "cargo run --manifest-path ./rusterstand-backend/Cargo.toml",
 		"stack": "concurrently \"npm run react\" \"npm run rocket\" "
 	},
-	"author": "",
+	"author": "JonTDean",
 	"license": "ISC",
 	"dependencies": {
 		"concurrently": "^6.0.0"
