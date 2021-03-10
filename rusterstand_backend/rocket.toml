@@ -1,0 +1,2 @@
+[global.databases]
+postgres_db = { url = "postgres://rsdb:120320@localhost/RusterstandDB" }

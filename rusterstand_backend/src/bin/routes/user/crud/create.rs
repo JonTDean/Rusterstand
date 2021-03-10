@@ -3,7 +3,7 @@ use rocket_contrib::json::{ Json, JsonValue };
 use crate::models::new_user_model;
 
 #[post("/user", format = "json", data="<new_user_data>")]
-pub async fn create_user(new_user_data: Json<new_user_model::NewUser>) -> JsonValue {
+pub async fn user(new_user_data: Json<new_user_model::NewUser>) -> JsonValue {
     json!("LOL")
 }
 
