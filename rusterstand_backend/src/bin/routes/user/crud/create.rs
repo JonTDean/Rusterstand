@@ -1,10 +1,22 @@
-
+// Main Components
 use rocket_contrib::json::{ Json, JsonValue };
-use crate::models::new_user_model;
+use diesel::prelude::*;
+use crate::db_connection::DBConnect;
+
+// User Components
+use crate::schema::users::dsl::*;
+use crate::models::*;
 
 #[post("/user", format = "json", data="<new_user_data>")]
-pub async fn user(new_user_data: Json<new_user_model::NewUser>) -> JsonValue {
-    json!("LOL")
+pub async fn user(conn: DBConnect, new_user_data: Json<new_user_model::NewUser>) -> JsonValue {
+    conn.run(|c|{
+        let res = diesel::insert_into(users)
+            .values(new_user_data.into_inner())
+            .execute(c)
+            .expect("Error Creating New User in DB");
+        
+        json!(res)
+    }).await
 }
 
 // #[post("/user", format = "json")]

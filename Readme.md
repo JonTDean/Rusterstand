@@ -4,6 +4,11 @@
 <h2>Description</h2>
     <div class="description">
     </div>
+<h2>Steps to Run</h2>
+    <div class="stepsToRun">
+        <p>To Start: </p>
+        <code>npm run stack</code>
+    </div>
 <h2>Created With</h2>
     <div class="createdList">
         <h4> Backend </h4>

@@ -1,6 +1,10 @@
-import * as React from 'react';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
 
-// Delete me
-export const Thing = () => {
-  return <div>the snozzberries taste like snozzberries</div>;
-};
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);

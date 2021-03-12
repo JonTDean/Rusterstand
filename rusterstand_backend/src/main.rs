@@ -2,9 +2,9 @@
 #[macro_use] extern crate rocket;
 #[macro_use] extern crate rocket_contrib;
 #[macro_use] extern crate diesel;
+#[macro_use] extern crate redis;
 
 // Modules
-#[path = "./bin/controller/user_controller.rs"] mod user_controller;
 #[path = "./bin/routes/routes.rs"] pub mod routes;
 #[path = "./bin/utils/db_connection.rs"] mod db_connection;
 pub mod schema;

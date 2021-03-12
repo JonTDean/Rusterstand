@@ -4,7 +4,7 @@
 	"description": "Learn Rust Sensibly",
 	"main": "",
 	"scripts": {
-		"start": "tsdx watch",
+		"start": "node server",
 		"react": "npm start --prefix rusterstand-frontend",
 		"rocket": "cargo run --manifest-path ./rusterstand-backend/Cargo.toml",
 		"stack": "concurrently \"npm run react\" \"npm run rocket\" "
